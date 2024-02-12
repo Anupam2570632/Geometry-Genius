@@ -23,7 +23,7 @@
         <div class="grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- //triangle -->
             <div
-                 onmouseleave="triangleContainerBgOnMouseLeave('triangle-container')" onmousemove="triangleContainerBgOnMouseMove('pink','triangle-container')" id="triangle-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+                 onmouseleave="changeBackgroundOnMouseLeave('triangle-container')" onmousemove="changeBackgroundOnMouseMove('pink','triangle-container')" id="triangle-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
                 <div class="text-center space-y-4">
                     <div class="flex items-center justify-center h-[150px]">
                         <img class="h-full w-[70%]" src="./images/triangle.png" alt="">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <!-- //Rectangle -->
-            <div onmouseleave="triangleContainerBgOnMouseLeave('rectangle-container')" onmousemove="triangleContainerBgOnMouseMove('cyan','rectangle-container')" id="rectangle-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+            <div onmouseleave="changeBackgroundOnMouseLeave('rectangle-container')" onmousemove="changeBackgroundOnMouseMove('cyan','rectangle-container')" id="rectangle-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
                 <div class="text-center space-y-4">
                     <div class="flex items-center justify-center h-[150px]">
                         <img class="h-full w-[70%]" src="./images/rectangle.png" alt="">
@@ -68,7 +68,7 @@
                 </div>
             </div>
             <!-- //Parallelogram -->
-            <div onmouseleave="triangleContainerBgOnMouseLeave('parallelogram-container')" onmousemove="triangleContainerBgOnMouseMove('steelblue','parallelogram-container')" id="parallelogram-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+            <div onmouseleave="changeBackgroundOnMouseLeave('parallelogram-container')" onmousemove="changeBackgroundOnMouseMove('steelblue','parallelogram-container')" id="parallelogram-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
                 <div class="text-center space-y-4">
                     <div class="flex items-center justify-center h-[150px]">
                         <img class="h-full w-[70%]" src="./images/parallelogram.png" alt="">
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <!-- //Rhombus -->
-            <div  onmouseleave="triangleContainerBgOnMouseLeave('rhombus-container')" onmousemove="triangleContainerBgOnMouseMove('yellow','rhombus-container')" id="rhombus-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+            <div  onmouseleave="changeBackgroundOnMouseLeave('rhombus-container')" onmousemove="changeBackgroundOnMouseMove('yellow','rhombus-container')" id="rhombus-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
                 <div class="text-center space-y-4">
                     <div class="flex items-center justify-center h-[150px]">
                         <img class="h-full w-[70%]" src="./images/rhombus.png" alt="">
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <!-- //Pentagon -->
-            <div id="pentagon-container" onmouseleave="triangleContainerBgOnMouseLeave('pentagon-container')" onmousemove="triangleContainerBgOnMouseMove('tomato','pentagon-container')"  class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+            <div id="pentagon-container" onmouseleave="changeBackgroundOnMouseLeave('pentagon-container')" onmousemove="changeBackgroundOnMouseMove('tomato','pentagon-container')"  class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
                 <div class="text-center space-y-4">
                     <div class="flex items-center justify-center h-[150px]">
                         <img class="h-full w-[70%]" src="./images/pentagon.png" alt="">
@@ -131,7 +131,7 @@
                 </div>
             </div>
             <!-- //Ellipse -->
-            <div id="ellipse-container" onmouseleave="triangleContainerBgOnMouseLeave('ellipse-container')" onmousemove="triangleContainerBgOnMouseMove('gray','ellipse-container')" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+            <div id="ellipse-container" onmouseleave="changeBackgroundOnMouseLeave('ellipse-container')" onmousemove="changeBackgroundOnMouseMove('gray','ellipse-container')" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
                 <div class="text-center space-y-4">
                     <div class="flex items-center justify-center h-[150px]">
                         <img class="h-full w-[70%]" src="./images/ellipse.png" alt="">
@@ -159,7 +159,7 @@
                 Area Calculation
             </h1>
             <div id="result-area">
-                
+
             </div>
         </div>
     </main>
@@ -168,6 +168,7 @@
     <script src="./script/calculateTriangleArea.js"></script>
     <script src="./script/showArea.js"></script>
     <script src="./script/getValuesById.js"></script>
+    <script src="./script/changeBackground.js"></script>
 </body>
 
 </html>

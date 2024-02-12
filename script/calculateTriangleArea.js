@@ -5,13 +5,3 @@ function calculateTriangleArea() {
     showArea('triangle', area);
 }
 
-function triangleContainerBgOnMouseMove(color, element) {
-    document.getElementById(element).style.backgroundColor = color;
-    document.getElementById(element).style.transitionDuration = "500ms";
-
-}
-
-function triangleContainerBgOnMouseLeave(element) {
-    document.getElementById(element).style.backgroundColor = "white";
-
-}
