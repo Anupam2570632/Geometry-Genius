@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="flex bg-blue-300 p-4 justify-between w-11/12 mx-auto my-8">
+        <div>
+            <h1 class="text-2xl font-bold">Interactive</h1>
+            <p class=" font-medium">Geometry Genius</p>
+        </div>
+        <button title="Blog" class="px-6 py-0 text-white font-bold bg-blue-700 rounded-md">
+            Blog
+        </button>
+    </header>
+    <main class="w-11/12 mx-auto flex gap-8 flex-col md:flex-row mb-10">
+        <div class="grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- //triangle -->
+            <div
+                 onmouseleave="triangleContainerBgOnMouseLeave('triangle-container')" onmousemove="triangleContainerBgOnMouseMove('pink','triangle-container')" id="triangle-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+                <div class="text-center space-y-4">
+                    <div class="flex items-center justify-center h-[150px]">
+                        <img class="h-full w-[70%]" src="./images/triangle.png" alt="">
+                    </div>
+                    <h1 class="text-2xl font-bold">Triangle</h1>
+                    <p>
+                        Area (A) = 0.5 X b X n
+                    </p>
+                    <div>
+                        <input id="triangle-base" class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name=""
+                            id="" placeholder="b">
+                        <span class="ml-2 mr-5">cm</span>
+                        <input id="triangle-height" class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name=""
+                            id="" placeholder="h">
+                        <span class="ml-2">cm</span>
+                    </div>
+                </div>
+                <div>
+                    <button onclick="calculateTriangleArea()"
+                        class="bg-blue-600 w-full py-3 rounded-xl text-white text-2xl font-bold">calculate</button>
+                </div>
+            </div>
+            <!-- //Rectangle -->
+            <div onmouseleave="triangleContainerBgOnMouseLeave('rectangle-container')" onmousemove="triangleContainerBgOnMouseMove('cyan','rectangle-container')" id="rectangle-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+                <div class="text-center space-y-4">
+                    <div class="flex items-center justify-center h-[150px]">
+                        <img class="h-full w-[70%]" src="./images/rectangle.png" alt="">
+                    </div>
+                    <h1 class="text-2xl font-bold">Rectangle</h1>
+                    <p>
+                        Area (A) = w X l
+                    </p>
+                    <div>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="w">
+                        <span class="ml-2 mr-5">cm</span>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="l">
+                        <span class="ml-2">cm</span>
+                    </div>
+                </div>
+                <div>
+                    <button title="calculate" class="bg-blue-600 w-full py-3 rounded-xl text-white text-2xl font-bold">calculate</button>
+                </div>
+            </div>
+            <!-- //Parallelogram -->
+            <div onmouseleave="triangleContainerBgOnMouseLeave('parallelogram-container')" onmousemove="triangleContainerBgOnMouseMove('steelblue','parallelogram-container')" id="parallelogram-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+                <div class="text-center space-y-4">
+                    <div class="flex items-center justify-center h-[150px]">
+                        <img class="h-full w-[70%]" src="./images/parallelogram.png" alt="">
+                    </div>
+                    <h1 class="text-2xl font-bold">Parallelogram</h1>
+                    <p>
+                        Area (A) = b X h
+                    </p>
+                    <div>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="b">
+                        <span class="ml-2 mr-5">cm</span>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="h">
+                        <span class="ml-2">cm</span>
+                    </div>
+                </div>
+                <div>
+                    <button title="calculate" class="bg-blue-600 w-full py-3 rounded-xl text-white text-2xl font-bold">calculate</button>
+                </div>
+            </div>
+            <!-- //Rhombus -->
+            <div  onmouseleave="triangleContainerBgOnMouseLeave('rhombus-container')" onmousemove="triangleContainerBgOnMouseMove('yellow','rhombus-container')" id="rhombus-container" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+                <div class="text-center space-y-4">
+                    <div class="flex items-center justify-center h-[150px]">
+                        <img class="h-full w-[70%]" src="./images/rhombus.png" alt="">
+                    </div>
+                    <h1 class="text-2xl font-bold">Rhombus</h1>
+                    <p>
+                        Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub>
+                    </p>
+                    <div>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="d1">
+                        <span class="ml-2 mr-5">cm</span>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="d2">
+                        <span class="ml-2">cm</span>
+                    </div>
+                </div>
+                <div>
+                    <button title="calculate" class="bg-blue-600 w-full py-3 rounded-xl text-white text-2xl font-bold">calculate</button>
+                </div>
+            </div>
+            <!-- //Pentagon -->
+            <div id="pentagon-container" onmouseleave="triangleContainerBgOnMouseLeave('pentagon-container')" onmousemove="triangleContainerBgOnMouseMove('tomato','pentagon-container')"  class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+                <div class="text-center space-y-4">
+                    <div class="flex items-center justify-center h-[150px]">
+                        <img class="h-full w-[70%]" src="./images/pentagon.png" alt="">
+                    </div>
+                    <h1 class="text-2xl font-bold">Pentagon</h1>
+                    <p>
+                        Area (A) = 0.5 X p X b
+                    </p>
+                    <div>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="p">
+                        <span class="ml-2 mr-5">cm</span>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="b">
+                        <span class="ml-2">cm</span>
+                    </div>
+                </div>
+                <div>
+                    <button title="calculate" class="bg-blue-600 w-full py-3 rounded-xl text-white text-2xl font-bold">calculate</button>
+                </div>
+            </div>
+            <!-- //Ellipse -->
+            <div id="ellipse-container" onmouseleave="triangleContainerBgOnMouseLeave('ellipse-container')" onmousemove="triangleContainerBgOnMouseMove('gray','ellipse-container')" class="p-8 space-y-4 grow border border-gray-500 rounded-lg">
+                <div class="text-center space-y-4">
+                    <div class="flex items-center justify-center h-[150px]">
+                        <img class="h-full w-[70%]" src="./images/ellipse.png" alt="">
+                    </div>
+                    <h1 class="text-2xl font-bold">Ellipse</h1>
+                    <p>
+                        Area (A) = πab
+                    </p>
+                    <div>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="a">
+                        <span class="ml-2 mr-5">cm</span>
+                        <input class="w-[25%] bg-gray-200 rounded-lg px-3 py-1" type="text" name="" id="" placeholder="b">
+                        <span class="ml-2">cm</span>
+                    </div>
+                </div>
+                <div>
+                    <button title="calculate" class="bg-blue-600 w-full py-3 rounded-xl text-white text-2xl font-bold">calculate</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="w-full md:w-[500px] h-[500px] text-center border border-gray-500 rounded-xl p-4">
+            <h1 class="underline text-xl font-bold text-center text-black ">
+                Area Calculation
+            </h1>
+            <div id="result-area">
+                
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./script/calculateTriangleArea.js"></script>
+    <script src="./script/showArea.js"></script>
+    <script src="./script/getValuesById.js"></script>
+</body>
+
+</html>
